@@ -29,10 +29,5 @@ def hello():
     return "hello"
 
 
-@app.route('/activity/<url>')
-def activity(url):
-    
-    return CruateGen(url)
-
 
 

@@ -106,43 +106,7 @@ def SummaryGen(user_msg,url):
   summary = chain.run(news_article)
   return remove_newlines(textwrap.fill(remove_newlines(summary), width=200))
 import re
-"""
 
-def CruateGen(URL):
-  text = Scrape(URL)
-  print("__________data read: " + text)
-
-  if 'Failed' in text:
-    return text
-  mydict = {}
-  
-  b = BinaryGen(text)
-
-  s = b.split("-")
-
-  mydict["Culture"] = s[1].strip()
-  mydict["Activity"] = s[2].strip()
-  mydict["Schedule"] = s[3].strip()
-
-     
-
-  print("__________binary value"+b)
-
-  p = BudgetGen(text)
-  print("__________budget"+p)
-  x = re.findall(r"\$[^\]]+", p)
-
-
-
-  if len(x)==1:
-     mydict['Budget'] = x[0]
-  else:
-     
-     mydict['Budget'] = f'from {x[0]} to {x[1]}'
-
-
-  return str(mydict)
-"""
 def CruateGen(URL):
   text = Scrape(URL)
   print("__________data read: " + text)
